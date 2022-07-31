@@ -6,11 +6,11 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name="OFFERS")
+@Table(name="offers")
 public class Offer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int offer_ID;
+    private Long id;
     private String conditions;
     @ManyToOne
     @JoinColumn(name="transporter_ID")

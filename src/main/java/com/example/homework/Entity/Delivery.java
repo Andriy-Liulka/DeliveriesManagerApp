@@ -8,11 +8,11 @@ import java.util.List;
 
 @Entity
 @Data
-@Table(name="DELIVERIES")
+@Table(name="deliveries")
 public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int delivery_ID;
+    private Long id;
     private String source;
     private String destination;
     private double capacity;
@@ -26,7 +26,7 @@ public class Delivery {
     @JoinColumn(name="transporter_ID")
     private Transporter transporter_ID;
     @ManyToMany
-            //(mappedBy = "DELIVERY")
+            //(mappedBy = "deliveries")
     private List<Good> goods;
 
 }
