@@ -13,6 +13,6 @@ public class Offer {
     private Long id;
     private String conditions;
     @ManyToOne
-    @JoinColumn(name="transporter_ID")
+    @JoinColumn(name="transporter_id")
     private Transporter transporter;
 }
