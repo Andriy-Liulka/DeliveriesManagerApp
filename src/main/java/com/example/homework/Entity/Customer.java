@@ -1,9 +1,9 @@
 package com.example.homework.Entity;
 
-import com.example.homework.Entity.Embeddeds.UserData;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -12,6 +12,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Embedded
-    private UserData userData;
+    private String name;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "customer")
+    private List<User> users;
 }
