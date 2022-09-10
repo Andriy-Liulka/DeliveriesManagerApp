@@ -15,4 +15,7 @@ public class Offer {
     @ManyToOne
     @JoinColumn(name="transporter_id")
     private Transporter transporter;
+    @ManyToOne(optional = false)
+    @JoinColumn(name="delivery_id")
+    private Delivery delivery;
 }

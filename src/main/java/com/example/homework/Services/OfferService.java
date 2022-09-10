@@ -1,7 +1,10 @@
 package com.example.homework.Services;
 
+import com.example.homework.Entity.Good;
 import com.example.homework.Entity.Offer;
 import com.example.homework.Repository.OfferRepository;
+import com.example.homework.dto.OfferDto;
+import com.example.homework.map.MainMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -9,9 +12,9 @@ import java.util.List;
 @AllArgsConstructor
 public class OfferService {
     private OfferRepository offerRepository;
-
-    public List<Offer> getAll() {
-        return offerRepository.findAll();
+    private final MainMapper mapper;
+    public List<OfferDto> getAll() {
+        return offerRepository.findAll().stream().map(mapper::toOfferDto).toList();
     }
 
     public Offer get(long id) {
@@ -30,4 +33,6 @@ public class OfferService {
     public void create(Offer offer) {
         offerRepository.save(offer);
     }
+
+    public Offer update(Offer offer) {return offerRepository.save(offer);}
 }

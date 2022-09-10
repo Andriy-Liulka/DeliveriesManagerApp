@@ -22,10 +22,10 @@ public class User {
     private boolean disabled;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne
+    @OneToOne(optional = true)
     @JoinColumn(name = "customer_id")
     private Customer customer;
-    @ManyToOne
+    @OneToOne(optional = true)
     @JoinColumn(name = "transporter_id")
     private Transporter transporter;
 }

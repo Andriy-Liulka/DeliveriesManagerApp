@@ -27,5 +27,6 @@ public class Delivery {
     private Transporter transporter;
     @ManyToMany(mappedBy = "deliveries", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Good> goods;
-
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery")
+    private List<Offer> offers;
 }

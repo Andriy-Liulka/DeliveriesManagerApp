@@ -1,7 +1,10 @@
 package com.example.homework.Services;
 
+import com.example.homework.Entity.Delivery;
 import com.example.homework.Entity.Good;
 import com.example.homework.Repository.GoodRepository;
+import com.example.homework.dto.GoodDto;
+import com.example.homework.map.MainMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -9,12 +12,13 @@ import java.util.List;
 @AllArgsConstructor
 public class GoodService {
     private GoodRepository goodRepository;
-
-    public List<Good> getAll() {
-        return goodRepository.findAll();
+    private final MainMapper mapper;
+    public List<GoodDto> getAll() {
+        return goodRepository.findAll().stream().map(mapper::toGoodDto).toList();
     }
 
     public Good get(long id) {
+
         try {
             return goodRepository.findById(id).orElseThrow(Exception::new);
         } catch (Exception ex) {
@@ -27,7 +31,9 @@ public class GoodService {
         goodRepository.deleteById(id);
     }
 
-    public void create(Good delivery) {
-        goodRepository.save(delivery);
+    public void create(Good good) {
+        goodRepository.save(good);
     }
+
+    public Good update(Good good) {return goodRepository.save(good);}
 }
