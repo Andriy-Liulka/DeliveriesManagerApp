@@ -18,5 +18,4 @@ public class GoodDto {
     private Double volume;
     private WeightUnit weightUnit;
     private VolumeUnit volumeUnit;
-    private List<DeliveryDto> deliveries;
 }
