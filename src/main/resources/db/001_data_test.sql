@@ -7,7 +7,7 @@ INSERT INTO transporters(name) VALUES ('Pershyj pereviznyk');
 
 INSERT INTO users(first_name,last_name, email, role, activated, customer_id, password) VALUES('Taras','Halynskyi', 'taras@gmail.com', 'CUSTOMER_USER', true, 1, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
 INSERT INTO users(first_name,last_name, email, role, activated, customer_id, password) VALUES('Andrii','Liulka', 'andrii@gmail.com', 'CUSTOMER_USER', true, 2, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
-INSERT INTO users(first_name,last_name, email, role, activated, customer_id, password) VALUES('Vitalii','Piven', 'vitalii@gmail.com', 'CUSTOMER_USER', true, 3, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
+INSERT INTO users(first_name,last_name, email, role, activated, customer_id, password) VALUES('Vitalii','Piven', 'vitaliigmail.com', 'CUSTOMER_USER', true, 3, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
 INSERT INTO users(first_name,last_name, email, role, activated, transporter_id, password) VALUES('Serhiy','Nemikov', 'serhiy@gmail.com', 'TRANSPORTER_USER', true, 1, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
 INSERT INTO users(first_name,last_name, email, role, activated, transporter_id, password) VALUES('Dmytro','Sakhman', 'dmytro@gmail.com', 'TRANSPORTER_USER', true, 2, '$2a$10$JGBiypjUOMYtmc/dTYg8tOIBI29h6ouGp8q9ZKaBwca3QO0kCj9we');
 
